@@ -384,13 +384,18 @@ input:focus {
   position: sticky !important;
   top: 200px !important;
 } */
-
+#body-container {
+  position: relative;
+}
 .main-right {
-  margin-top: 250px;
-  top: 700px !important;
+  position: sticky;
+  top: 150px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
+/* .main-right > div {
+  position: sticky;
+  top: 350px;
+} */
 .menu-item-selected {
   background-color: #c7c8cc;
 }

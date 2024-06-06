@@ -332,7 +332,7 @@ async function generateInformationCard(pokemonIndex) {
   let abilities = ``;
 
   pokemonObject.types.forEach((type) => {
-    let badgeHTML = `<span class="custom-badge ms-1 ${type.type.name} rounded">${type.type.name}</span>`;
+    let badgeHTML = `<span class="custom-badge d-inline-block ms-1 ${type.type.name} rounded">${type.type.name}</span>`;
     badges += badgeHTML;
   });
   pokemonObject.abilities.forEach((ability) => {
@@ -346,7 +346,7 @@ async function generateInformationCard(pokemonIndex) {
   let innerDiv = document.createElement("div");
   //innerDiv.classList.add("sticky-top");
   innerDiv.innerHTML = `
-    <div class="mt-4 pokemon-splash d-flex  justify-content-center">
+    <div class="mt-2 pokemon-splash d-flex  justify-content-center">
             <img
               src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonIndex}.png"
               alt=""
@@ -356,18 +356,18 @@ async function generateInformationCard(pokemonIndex) {
           </div>
           <div>
             <p
-              class="fw-bold text-center number-font fs-5 mt-3"
+              class="fw-bold text-center number-font fs-5 mt-1"
               style="color: #959ca7"
             >
               #${pokemonIndex}
             </p>
-            <p class="fw-bold text-center roboto fs-4 capitalize">${
+            <p class="fw-bold text-center roboto fs-5 mb-1 capitalize">${
               pokemonObject.name
             }</p>
-            <p class="text-center mt-1">
+            <p class="text-center mt-0 d-flex align-items-start justify-content-center">
               ${badges}
             </p>
-            <p class="flavor-text text-center fs-6 p-0"></p>
+            <p class="flavor-text text-center fs-6 p-0 mb-1"></p>
             <p class="text-center fs-6 fw-bold roboto mb-1">ABILITIES</p>
             <div id="abilities" class="row justify-content-evenly row-gap-2">
               ${abilities}
