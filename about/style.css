@@ -13,9 +13,7 @@ html {
   color: white !important;
 }
 .grid {
-  margin: 0px auto;
   margin-bottom: 50px;
-  width: 90vw;
   height: auto;
   display: grid;
   /* grid-template-columns: 1fr; */
